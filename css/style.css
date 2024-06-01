@@ -19,7 +19,7 @@ body {
     --second-color: #f6f6f6;
     --white-color: #ffffff;
     --black-color: #000000;
-    /*  text */
+    /*  text size */
     --lg-heading: 51px;
     --md-heading: 38px;
     --sub-heading: 24px;
@@ -539,13 +539,19 @@ body {
     border-bottom: 1.5px solid #dddddd;
     color: var(--black-color);
     outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-container input:focus {
+    border-color: var(--primary-color);
 }
 
 .form-container label {
     color: #aaaaaa;
     font-weight: 400;
     font-size: var(--extra-small-text);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, font-size 0.3s ease;
+    transform-origin: left;
 }
 
 .form-container .form-header {
@@ -571,7 +577,7 @@ body {
 }
 
 .form-container .terms-and-conditions input {
-    color: var(--primary-color);
+    accent-color: var(--primary-color);
 }
 
 
