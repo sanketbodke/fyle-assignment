@@ -66,6 +66,10 @@ $(document).ready(function() {
         $('#form').css('display', 'block');
     });
 
+    $('.close-btn').click(function(e) {
+        $('#form').css('display', 'none');
+    });
+
     $(document).on('click', function(e) {
         if (!$(e.target).closest('#form').length && !$(e.target).closest('.contact-btn').length) {
             $('#form').css('display', 'none');

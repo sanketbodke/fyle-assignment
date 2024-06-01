@@ -36,21 +36,7 @@
             </p>
         </div>
 
-        <div class="carousel container">
-            <div class="carousel-content">
-                <img src="./images/carousel-1.png" />
-
-                <div class="image-content">
-                    <img src="./images/web-development.png" />
-                    <h1>WEB DEVELOPMENT</h1>
-                    <p>Morbi sed lacus nec risus finibus</p>
-                    <a href="https://fylehq.com" target="_blank">
-                        READ MORE
-                        <img src="./images/right-arrow.png" alt="right-arrow">
-                    </a>
-                </div>
-            </div>
-
+        <div class="carousel">
             <div class="carousel-content">
                 <img src="./images/carousel-1.png" />
 
@@ -81,6 +67,20 @@
 
             <div class="carousel-content">
                 <img src="./images/carousel-3.png" />
+
+                <div class="image-content">
+                    <img src="./images/web-development.png" />
+                    <h1>WEB DEVELOPMENT</h1>
+                    <p>Morbi sed lacus nec risus finibus</p>
+                    <a href="https://fylehq.com" target="_blank">
+                        READ MORE
+                        <img src="./images/right-arrow.png" alt="right-arrow">
+                    </a>
+                </div>
+            </div>
+
+            <div class="carousel-content">
+                <img src="./images/carousel-2.png" />
 
                 <div class="image-content">
                     <img src="./images/web-development.png" />
@@ -316,7 +316,10 @@
 
     <form id="form" action="https://getform.io/f/paygzyza" method="post">
         <div class="form-container">
-            <h3>Talk to us</h3>
+            <div class="form-header">
+                <h3>Talk to us</h3>
+                <img src="./images/close-icon.png" alt="close button" class="close-btn">
+            </div>
             <label for="email">Work email*</label>
             <input type="email" name="email" required />
             <div class="form-name-input">
@@ -343,7 +346,6 @@
     </footer>
 
     <script src="./js/jquery.min.js"></script>
-    <script src=" vendor/bootstrap/js/bootstrap.bundle.min.js "></script>
     <script src="./js/script.js"></script>
 </body>
 
