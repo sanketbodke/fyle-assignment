@@ -63,16 +63,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
 $(document).ready(function() {
     $('.contact-btn').click(function(e) {
-        $('#form').css('display', 'block');
+        $('#form').removeClass('form-hidden').addClass('form-visible');
     });
 
     $('.close-btn').click(function(e) {
-        $('#form').css('display', 'none');
+        $('#form').removeClass('form-visible').addClass('form-hidden');
     });
 
     $(document).on('click', function(e) {
         if (!$(e.target).closest('#form').length && !$(e.target).closest('.contact-btn').length) {
-            $('#form').css('display', 'none');
+            $('#form').removeClass('form-visible').addClass('form-hidden');
         }
     });
 });

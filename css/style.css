@@ -55,6 +55,11 @@ body {
     cursor: pointer;
     border: none;
     outline: none;
+    transition: opacity 0.3s ease;
+}
+
+.btn-primary-custom:hover {
+    opacity: 0.9;
 }
 
 .btn-primary:hover {
@@ -498,11 +503,25 @@ body {
 /* ################### Contact Form ####################  */
 
 #form {
-    display: none;
-    position: absolute;
-    top: 50%;
+    position: fixed;
+    top: -100%;
     left: 50%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+    transform: translateX(-50%);
+    transition: top 0.5s ease;
+}
+
+#form.form-visible {
+    top: 50%;
     transform: translate(-50%, -50%);
+}
+
+#form.form-hidden {
+    top: -100%;
+    transform: translateX(-50%);
 }
 
 .form-container {
