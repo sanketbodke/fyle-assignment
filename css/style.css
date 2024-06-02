@@ -540,7 +540,57 @@ body {
     margin-bottom: 30px;
 }
 
-.form-name-input {
+.form-container .form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-container .form-header img {
+    cursor: pointer;
+}
+
+.form-container input {
+    border: none;
+    border-bottom: 1.5px solid #dddddd;
+    color: var(--black-color);
+    font-size: var(--small-text);
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-container label {
+    color: #aaaaaa;
+    font-weight: 400;
+    font-size: var(--extra-small-text);
+    pointer-events: none;
+}
+
+.form-container .form-email-input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+}
+
+.form-container .input-style {
+    height: 40px;
+    width: 100%;
+}
+
+.form-container .label-absolute {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+.form-container .input-focus {
+    transform: translateY(-20px);
+    font-size: var(--extra-small-text);
+}
+
+.form-container .form-name-input {
     display: flex;
     gap: 30px;
     margin: 40px 0;
@@ -551,36 +601,11 @@ body {
     display: flex;
     flex-direction: column;
     width: 47%;
-}
-
-.form-container input {
-    border: none;
-    border-bottom: 1.5px solid #dddddd;
-    color: var(--black-color);
-    outline: none;
-    transition: border-color 0.3s ease;
+    position: relative;
 }
 
 .form-container input:focus {
     border-color: var(--primary-color);
-}
-
-.form-container label {
-    color: #aaaaaa;
-    font-weight: 400;
-    font-size: var(--extra-small-text);
-    transition: transform 0.3s ease, font-size 0.3s ease;
-    transform-origin: left;
-}
-
-.form-container .form-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.form-container .form-header img {
-    cursor: pointer;
 }
 
 .form-container .terms-and-conditions {

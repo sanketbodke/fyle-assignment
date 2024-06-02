@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
+
+    // carousel
+
     const carousel = document.querySelector('.carousel');
     const bullets = document.querySelectorAll('.bullet');
 
@@ -28,6 +31,8 @@ document.addEventListener("DOMContentLoaded", function() {
         const index = Math.round(carousel.scrollLeft / carousel.offsetWidth);
         setActiveBullet(index);
     });
+
+    // projects tab
 
     const contentContainers = document.querySelectorAll('.our-project-content-container .content');
     const projectImage = document.querySelector('.our-projects-content img');
@@ -59,7 +64,23 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     });
+
+    // form animation
+
+    document.querySelectorAll('.form-email-input input, .form-name-input .firstName input, .form-name-input .lastName input').forEach(function(input) {
+        input.addEventListener('focus', function() {
+            input.parentElement.querySelector('label').classList.add('input-focus');
+        });
+
+        input.addEventListener('blur', function() {
+            if (!input.value.trim()) {
+                input.parentElement.querySelector('label').classList.remove('input-focus');
+            }
+        });
+    });
 });
+
+// form pop-up
 
 $(document).ready(function() {
     $('.contact-btn').click(function(e) {
